@@ -4,7 +4,7 @@ const CONFIG = {
     yesButton: "YES",
     noButton: "NO",
     noEscapeTexts: ["GITUU YAA (¬`‸´¬) ", "HUMPHHH", "3 kali berarti yesss wlee💕"],
-    confirmTitle: "YEAAAY! Kamu Beneran Mau 💗",
+    confirmTitle: "YiPPIEE! Kamu beneran mauuuu 💗",
     confirmText: "Mulai dari sekarang kamu resmi jadi…",
     badgeText: "My Valentine",
     nextButton: "Lanjut ",
@@ -367,4 +367,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem();
     initMouseTrail();
 });
+
 
