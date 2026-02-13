@@ -1562,12 +1562,4 @@ body {
     .envelope.opened .letter {
         transform: translateY(-160px) scale(1.15);
     }
-    canvas,
-.sparkle-container,
-.bg-shapes,
-.bg-gradient {
-    pointer-events: none;
-}
-
-
 }
