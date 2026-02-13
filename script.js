@@ -14,7 +14,7 @@ const CONFIG = {
     bouquetMessage: "Yeay! Udah jadi punya kamuu 💕",
     nextFlowerButton: "Next ",
     collageTitle: "My Fav Pic",
-    collageSubtitle: "Sejak kamu hadir, hal sederhana pun terasa istimewa. Happy Valentine, my favorite person. 💕",
+    collageSubtitle: "Sejak ada kamuu, hidupku punya warnaa Happy Valentinee, my favorite person. 💕",
     nextCollageButton: "Satu halaman lagi… ",
     finalTitle: "Happy Valentine, My Love 💞",
     finalMessage: `Makasih ya sudah hadir dan bikin hariku selalu terasa cukup. Kamu adalah alasan kenapa senyum itu mudah muncul. Semoga hari harimu selalu penuh kehangatan dan kebahagiaan. Aku selalu ada untukmu. Happy Valentine 💕`,
@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem();
     initMouseTrail();
 });
+
 
 
 
