@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine For You 💖</title>
+
+<style>
+
+*{ box-sizing:border-box; }
+
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#ffd1dc,#ffe4ec);
+    overflow:hidden;
+}
+
+/* PAGE */
+.page{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:20px;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.page.active{
+    display:flex;
+}
+
+/* CARD */
+.card{
+    width:90%;
+    max-width:420px;
+    background:rgba(255,255,255,0.35);
+    backdrop-filter:blur(12px);
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 10px 40px rgba(255,0,100,0.2);
+    position:relative;
+    z-index:10;
+}
+
+/* TEXT */
+h1{ color:#e84393; font-size:clamp(22px,5vw,32px); }
+h3{ font-size:clamp(16px,4vw,20px); }
+p{ font-size:clamp(14px,3.8vw,16px); line-height:1.6; }
+
+/* BUTTON */
+button{
+    width:100%;
+    max-width:250px;
+    padding:12px;
+    border:none;
+    border-radius:20px;
+    background:#ff4f8b;
+    color:white;
+    font-weight:bold;
+    margin:8px auto;
+    cursor:pointer;
+    transition:0.3s;
+    position:relative;
+    z-index:20;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* NO BUTTON SMOOTH MOVE */
+#noBtn{
+    transition:left 0.3s ease, top 0.3s ease, transform 0.2s;
+}
+
+/* ENVELOPE */
+.envelope{
+    width:180px;
+    height:110px;
+    background:#ff8fab;
+    position:relative;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.5s;
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:#ff6fa5;
+    clip-path:polygon(0 0,100% 0,50% 50%);
+    transform-origin:top;
+    transition:0.8s;
+}
+
+.letter{
+    position:absolute;
+    width:90%;
+    height:90%;
+    background:white;
+    top:5%;
+    left:5%;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    transform:translateY(100%);
+    transition:0.8s;
+}
+
+.open .flap{ transform:rotateX(180deg); }
+.open .letter{ transform:translateY(0); }
+
+/* HEART */
+.heart{
+    position:fixed;
+    top:-10px;
+    color:#ff4f8b;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="page active">
+    <div class="card">
+        <h1>Will you be my Valentine? 💕</h1>
+        <button onclick="yesClick()">YES</button>
+        <button id="noBtn" onmouseenter="delayKabur()">NO</button>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="page">
+    <div class="card">
+        <h1>YAAAY! Kamu beneran mau 💗</h1>
+        <h3>My Valentine 💞</h3>
+        <button onclick="openEnvelope()">Buka surat 💌</button>
+    </div>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="page">
+    <div class="envelope" id="env" onclick="openLetter()">
+        <div class="flap"></div>
+        <div class="letter">For You 💖</div>
+    </div>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="page">
+    <div class="card">
+        <h1>My Aprhodite 💖</h1>
+
+        <p>
+        Aku mungkin bukan orang yang sempurna,
+        tapi aku selalu ingin jadi yang terbaik buat kamu.
+        </p>
+
+        <p>
+        Terima kasih sudah hadir dan membuat hidupku lebih berwarna.
+        Kamu itu sederhana, tapi selalu bikin hatiku pulang.
+        </p>
+
+        <p>
+        Di antara semua hal yang terjadi di hidupku,
+        ketemu kamu adalah bagian paling aku syukuri.
+        </p>
+
+        <p>
+        Dan kalau aku harus menjalani sepuluh ribu kehidupan,
+        aku akan tetap memilih kamu di setiap kesempatan 💗
+        </p>
+
+        <h3>
+        Ako bih morao živjeti deset tisuća života, uvijek bih izabrao tebe.
+        </h3>
+
+    </div>
+</div>
+
+<script>
+
+/* pindah halaman */
+function showPage(id){
+    document.querySelectorAll(".page").forEach(p=>{
+        p.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+}
+
+/* klik yes */
+function yesClick(){
+    showPage("page2");
+    hearts();
+}
+
+/* buka envelope */
+function openEnvelope(){
+    showPage("page3");
+    hearts();
+}
+
+/* buka surat */
+function openLetter(){
+    document.getElementById("env").classList.add("open");
+    hearts();
+    setTimeout(()=>{
+        showPage("page4");
+    },1500);
+}
+
+/* DELAY supaya NO tidak langsung kabur */
+let kaburTimeout;
+
+function delayKabur(){
+    clearTimeout(kaburTimeout);
+    kaburTimeout = setTimeout(()=>{
+        kabur();
+    },250);
+}
+
+/* kabur tapi tetap dalam layar */
+function kabur(){
+    let btn=document.getElementById("noBtn");
+
+    let btnWidth = btn.offsetWidth;
+    let btnHeight = btn.offsetHeight;
+
+    let padding = 30;
+
+    let maxX = window.innerWidth - btnWidth - padding;
+    let maxY = window.innerHeight - btnHeight - padding;
+
+    let x = Math.random() * maxX;
+    let y = Math.random() * maxY;
+
+    btn.style.position="absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+
+/* animasi hati */
+function hearts(){
+    for(let i=0;i<20;i++){
+        let h=document.createElement("div");
+        h.className="heart";
+        h.innerHTML="💖";
+        h.style.left=Math.random()*100+"vw";
+        h.style.animationDuration=(Math.random()*2+3)+"s";
+        document.body.appendChild(h);
+        setTimeout(()=>h.remove(),5000);
+    }
+}
+
+</script>
+
+</body>
+</html>
