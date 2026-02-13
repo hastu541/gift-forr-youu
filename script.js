@@ -17,7 +17,7 @@ const CONFIG = {
     collageSubtitle: "Sejak ada kamuu, hidupku punya warnaa Happy Valentinee, my favorite person. 💕",
     nextCollageButton: "Satu halaman lagi… ",
     finalTitle: "Happy Valentine, Babeee 💞",
-    finalMessage: `Thank you, my love, for being my safest place and my softest landing. For loving me as I am, even with all my flaws and silly little moods, I know I can be annoying sometimes and get on your nerves (hehe), but no matter what, my heart has always been yours. And it’s not just for Valentine’s Day. I’ll keep choosing you, loving you, and staying by your side — today, tomorrow, and every day after that. 💕 💕`,
+    finalMessage: `Thank you, my love, for being my safest place and my softest landing. For loving me as I am, even with all my flaws and silly little moods, I know I can be annoying sometimes and get on your nerves (hehe), but no matter what, my heart has always been yours. And it’s not just for Valentine’s Day. I’ll keep choosing you, loving you, and staying by your side today, tomorrow, and every day after that. 💕 💕`,
     restartButton: "Restart ",
     copyButton: "Copy Message ",
     copySuccess: "Pesan berhasil dicopy! "
@@ -367,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem();
     initMouseTrail();
 });
+
 
 
 
