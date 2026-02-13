@@ -3,7 +3,7 @@ const CONFIG = {
     subQuestion: "Please say yes ",
     yesButton: "YES",
     noButton: "NO",
-    noEscapeTexts: ["Eits, ga bisa😝", "Hehe, coba lagi 😜", "Yaudah deh, aku anggap YES ya! 💕"],
+    noEscapeTexts: ["GITUU YAA (¬`‸´¬) ", "HUMPHHH", "3 kali berarti yesss wlee💕"],
     confirmTitle: "YEAAAY! Kamu Beneran Mau 💗",
     confirmText: "Mulai dari sekarang kamu resmi jadi…",
     badgeText: "My Valentine",
@@ -367,3 +367,4 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem();
     initMouseTrail();
 });
+
