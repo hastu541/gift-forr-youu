@@ -6,7 +6,7 @@ const CONFIG = {
     noEscapeTexts: ["GITUU YAA (¬`‸´¬) ", "HUMPHHH", "3 kali berarti yesss wlee💕"],
     confirmTitle: "YiPPIEE! Kamu beneran mauuuu 💗",
     confirmText: "Mulai dari sekarang kamu resmi jadi…",
-    badgeText: "My Valentine",
+    badgeText: "My Valentineee ",
     nextButton: "Lanjut ",
     repeatButton: "Ulangi pertanyaan",
     flowerTitle: "Ini kado spesial buat kamu ",
@@ -367,5 +367,6 @@ document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem();
     initMouseTrail();
 });
+
 
 
