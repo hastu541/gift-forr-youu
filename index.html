@@ -8,46 +8,32 @@
 </head>
 <body>
 
-    <!-- Sparkles Background -->
-    <div id="sparkleContainer"></div>
+<div class="container">
 
-    <!-- Floating Petals -->
-    <div id="petalsContainer"></div>
+    <!-- PAGE 1 -->
+    <div id="page1" class="page active">
+        <h1 id="mainQuestion">Will you be my Valentine?</h1>
+        <p id="subText">Please say yes</p>
 
-    <!-- Main Container -->
-    <div class="container">
-
-        <!-- Badge -->
-        <div class="badge">
-            <span class="badge-text">For Someone Special</span>
+        <div class="button-group">
+            <button id="yesBtn">YES</button>
+            <button id="noBtn">NO</button>
         </div>
-
-        <!-- Page 1 -->
-        <div id="page1" class="page active">
-            <h1 id="mainQuestion">Will you be my Valentine?</h1>
-            <p id="subText">Please say yes</p>
-
-            <div class="buttons">
-                <button id="yesBtn" class="yes-btn">YES</button>
-                <button id="noBtn" class="no-btn">NO</button>
-            </div>
-        </div>
-
-        <!-- Page 2 -->
-        <div id="page2" class="page">
-            <h1 id="thankYouText">YAYYY 💖</h1>
-            <p id="loveMessage">You just made me the happiest person alive!</p>
-
-            <button id="continueBtn" class="yes-btn">Continue</button>
-        </div>
-
-        <!-- Page 3 -->
-        <div id="page3" class="page">
-            <h1 id="finalMessage">I love you ❤️</h1>
-        </div>
-
     </div>
 
-    <script src="script.js"></script>
+    <!-- PAGE 2 -->
+    <div id="page2" class="page">
+        <h1 id="thankYouText">Yayyy ❤️</h1>
+        <button id="continueBtn">Continue</button>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div id="page3" class="page">
+        <h1 id="finalMessage">I Love You 💖</h1>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
