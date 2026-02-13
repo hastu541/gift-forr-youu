@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>For You ❤️</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="container">
+<div class="bg-gradient"></div>
+<div class="bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+</div>
+
+<canvas id="heartCanvas"></canvas>
+<div class="sparkle-container" id="sparkleContainer"></div>
+
+<div id="app">
 
     <!-- PAGE 1 -->
-    <div id="page1" class="page active">
-        <h1 id="mainQuestion">Will you be my Valentine?</h1>
-        <p id="subText">Please say yes</p>
+    <div class="page active" id="page1">
+        <div class="page-content">
+            <div class="glass-card main-card">
 
-        <div class="button-group">
-            <button id="yesBtn">YES</button>
-            <button id="noBtn">NO</button>
+                <h1 class="title-main" id="mainQuestion">
+                    Will you be my Valentine?
+                </h1>
+
+                <p class="subtitle" id="subQuestion">
+                    Please say yes
+                </p>
+
+                <div class="button-group">
+                    <button class="btn btn-yes" id="yesBtn">
+                        <span class="btn-text">YES</span>
+                        <span class="btn-shine"></span>
+                    </button>
+
+                    <button class="btn btn-no" id="noBtn">
+                        <span class="btn-text">NO</span>
+                        <span class="btn-shine"></span>
+                    </button>
+                </div>
+
+                <p class="escape-text hidden" id="noEscapeText"></p>
+
+            </div>
         </div>
-    </div>
-
-    <!-- PAGE 2 -->
-    <div id="page2" class="page">
-        <h1 id="thankYouText">Yayyy ❤️</h1>
-        <button id="continueBtn">Continue</button>
-    </div>
-
-    <!-- PAGE 3 -->
-    <div id="page3" class="page">
-        <h1 id="finalMessage">I Love You 💖</h1>
     </div>
 
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
